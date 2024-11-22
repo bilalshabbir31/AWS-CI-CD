@@ -14,7 +14,7 @@ const createUser = async (req, res) => {
           dateOfBirth: dateOfBirth
         },
       });
-      res.status(200).json(user);
+      res.status(200).json({message: "Success", user: user});
     } catch (error) {
       console.log(error);
       res.status(500).json(error);
